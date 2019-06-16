@@ -2,7 +2,7 @@ import random
 
 statistics = list()
 
-print('Welcome to Dice Rolling Simulator 1.0')
+print('Welcome to Dice Rolling Simulator v1.5')
 start = input('Do you want to roll the dice ? Type Yes to start ')
 
 
