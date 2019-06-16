@@ -16,6 +16,10 @@ def stats():
     print('mean: ' + str(mean))
     # most common number
     # least common number
+    # counter stats
+    for x in [1, 2, 3, 4, 5, 6]:
+        count = statistics.count(x)
+        print(x, 'rolled', count, 'times')
 
 
 def roll():
