@@ -1,6 +1,7 @@
 import random
 
 statistics = list()
+rollcount = 0
 
 print('Welcome to Dice Rolling Simulator v1.5')
 start = input('Do you want to roll the dice ? Type Yes to start ')
@@ -9,6 +10,7 @@ start = input('Do you want to roll the dice ? Type Yes to start ')
 def stats():
     print('Here are the stats !')
     # roll count
+    print('Roll Count:', rollcount)
     # mean
     sum_stats = sum(statistics)
     len_stats = len(statistics)
@@ -23,6 +25,8 @@ def stats():
 
 
 def roll():
+    global rollcount
+    rollcount = rollcount + 1
     print('You started rolling the dice')
     number = random.randrange(1, 6)
     print('You got ' + str(number))
@@ -41,5 +45,3 @@ def roll():
 
 if start == 'yes':
     roll()
-
-# Stats
