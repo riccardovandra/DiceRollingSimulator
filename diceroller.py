@@ -38,14 +38,13 @@ def stats():
     print('')
     for key, value in most_common:
         print(key, 'rolled', value, 'times')
-    print(most_common)
 
 
 def roll():
     global rollcount
     rollcount = rollcount + 1
     print('You started rolling the dice')
-    number = random.randrange(1, 6)
+    number = random.randrange(1, 7)
     print('You got ' + str(number))
     statistics.append(number)
     reroll = input('Would you like to reroll ? ')
