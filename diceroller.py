@@ -3,8 +3,8 @@ import random
 statistics = list()
 rollcount = 0
 
-print('Welcome to Dice Rolling Simulator v2')
-start = input('Do you want to roll the dice ? Type Yes to start ')
+print('Welcome to Dice Rolling Simulator v2.5')
+start = input('Do you want to roll the dice ? Type Yes to start or type autoroll plus a number to auto roll the dice a selected number of times')
 
 
 def stats():
@@ -59,5 +59,19 @@ def roll():
         exit()
 
 
+def autoroll(times):
+    global rollcount
+    rollcount = times
+    for number in range(1, times+1):
+        number = random.randrange(1, 7)
+        print('You got', number)
+        statistics.append(number)
+
+
 if start == 'yes':
     roll()
+elif 'autoroll' in start:
+    y = start.split(' ')
+    times_to_roll = int(y[1])
+    autoroll(int(times_to_roll))
+    stats()
