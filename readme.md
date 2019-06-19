@@ -9,3 +9,4 @@ Objective: Create a simple Dice Rolling Simulator
    - Most Common Number
    - Least Common Number
    - Stats around each rolled number
+5. Autoroll Functionality
